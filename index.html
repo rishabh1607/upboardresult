@@ -364,7 +364,7 @@
                         $("#error-msg").text("Please enter Roll Number and Mother's Name").fadeIn();
                         return;
                     }
-                    requestPayload = { rroll: rollNumber, mname: extraValue, year: '2026' };
+                    requestPayload = { rroll: rollNumber, dob: extraValue, year: '2026' };
                 }
 
                 $("#loader").removeClass("hidden");
