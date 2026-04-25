@@ -342,11 +342,19 @@
                     }
                 }
             });
+            // Naya code: Mother's Name ko type karte waqt capital karne ke liye
+            $("#dynamicInput").on("input", function(e) {
+                if ($("#examClass").val() === 'XII') {
+                    $(this).val($(this).val().toUpperCase());
+                }
+            });
+
 
             $("#btnFetch").click(function() {
                 const examType = $("#examClass").val();
                 const rollNumber = $("#rollNo").val().trim();
-                const extraValue = $("#dynamicInput").val().trim();
+                const extraValue = $("#dynamicInput").val().trim().toUpperCase();
+
 
                 let apiUrl = "";
                 let requestPayload = {};
